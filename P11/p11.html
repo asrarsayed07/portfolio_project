@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A responsive newspaper-style three-column layout built with CSS Grid.">
+  <title>The Daily Ledger — City Edition</title>
+  <link rel="stylesheet" href="p11.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="masthead">
+      <div class="topline">
+        <span>INDEPENDENT • SINCE 1924</span>
+        <span>MONDAY, NOVEMBER 16, 2026</span>
+        <span>VOL. 102 · NO. 318</span>
+      </div>
+      <a class="brand" href="#top" aria-label="The Daily Ledger home">The Daily Ledger</a>
+      <p class="tagline">The city’s paper of record</p>
+      <nav class="sections" aria-label="Newspaper sections">
+        <a href="#world">World</a>
+        <a href="#city">City</a>
+        <a href="#culture">Culture</a>
+        <a href="#science">Science</a>
+        <a href="#opinion">Opinion</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <div class="edition-line">
+        <span>CITY EDITION</span>
+        <span>A clearer view of what matters</span>
+        <span>PRICE ₹10</span>
+      </div>
+
+      <section class="lead-story" aria-labelledby="lead-title">
+        <div class="lead-copy">
+          <p class="kicker">THE FUTURE OF THE CITY</p>
+          <h1 id="lead-title">A greener city takes shape, one neighborhood at a time</h1>
+          <p class="deck">
+            A new network of pocket parks is transforming overlooked corners into
+            places to meet, play and breathe.
+          </p>
+          <p class="byline">By Maya Desai <span>•</span> City Correspondent</p>
+        </div>
+
+        <figure class="lead-art" role="img" aria-label="Illustration of a city skyline surrounded by trees">
+          <div class="sun"></div>
+          <div class="skyline">
+            <i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <div class="hill hill-back"></div>
+          <div class="hill hill-front"></div>
+          <figcaption>A new green corridor connects five city districts.</figcaption>
+        </figure>
+      </section>
+
+      <div class="content-grid">
+        <section class="column" id="world" aria-labelledby="world-heading">
+          <h2 class="column-heading" id="world-heading">Around the world</h2>
+
+          <article class="story">
+            <p class="kicker">DIPLOMACY</p>
+            <h3>Leaders agree on a shared plan for clean shipping</h3>
+            <p class="summary">
+              Ports and cargo companies will work together to cut emissions over
+              the next decade.
+            </p>
+            <p class="byline">By Daniel Kim <span>•</span> 4 min read</p>
+          </article>
+
+          <article class="story">
+            <p class="kicker">IN BRIEF</p>
+            <h3>Restored wetlands welcome a rare flock</h3>
+            <p class="summary">
+              Conservationists say the return of the painted stork is a hopeful
+              sign for the estuary.
+            </p>
+            <p class="byline">By Leena Roy <span>•</span> 3 min read</p>
+          </article>
+
+          <aside class="quote-card">
+            <span class="quote-mark">“</span>
+            <blockquote>Good public spaces make room for everyone.</blockquote>
+            <p>— Asha Menon, urban planner</p>
+          </aside>
+        </section>
+
+        <section class="column" id="city" aria-labelledby="city-heading">
+          <h2 class="column-heading" id="city-heading">The city desk</h2>
+
+          <article class="story featured-story">
+            <div class="story-illustration library" role="img" aria-label="Illustration of a neighborhood library"></div>
+            <p class="kicker">COMMUNITY</p>
+            <h3>Old library finds a new chapter as a shared workshop</h3>
+            <p class="summary">
+              The century-old reading room now lends tools, hosts classes and
+              keeps its doors open late.
+            </p>
+            <p class="byline">By Rohan Iyer <span>•</span> 6 min read</p>
+          </article>
+
+          <article class="story compact-story">
+            <p class="kicker">TRANSIT</p>
+            <h3>Weekend buses to run every ten minutes</h3>
+            <p class="byline">Staff report <span>•</span> 2 min read</p>
+          </article>
+        </section>
+
+        <section class="column" id="culture" aria-labelledby="culture-heading">
+          <h2 class="column-heading" id="culture-heading">Culture &amp; ideas</h2>
+
+          <article class="story">
+            <p class="kicker">THE ARTS</p>
+            <h3>At the night market, music brings the lanes alive</h3>
+            <p class="summary">
+              A monthly gathering puts local musicians and makers in the
+              spotlight after sunset.
+            </p>
+            <p class="byline">By Nisha Paul <span>•</span> 5 min read</p>
+          </article>
+
+          <article class="story">
+            <p class="kicker">WEEKEND REVIEW</p>
+            <h3>The small café serving a big slice of history</h3>
+            <p class="summary">
+              On a quiet corner, recipes passed between generations tell a story
+              of migration and belonging.
+            </p>
+            <p class="byline">By Arjun Mehta <span>•</span> 4 min read</p>
+          </article>
+
+          <div class="newsletter" id="opinion">
+            <p class="kicker">THE MORNING BRIEF</p>
+            <h3>News worth your time.</h3>
+            <p>Our editors’ essential reads, delivered every morning.</p>
+            <a href="mailto:brief@example.com?subject=Morning%20Brief">
+              Sign up for the newsletter →
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <section class="bottom-strip" id="science" aria-label="More headlines">
+        <span class="strip-label">ALSO TODAY</span>
+        <a href="#science">Science: The tiny sensor keeping rivers in view</a>
+        <a href="#city">Business: Market gardeners find new customers</a>
+        <a href="#opinion">Opinion: Make room for the everyday</a>
+      </section>
+    </main>
+
+    <footer>
+      <span>THE DAILY LEDGER</span>
+      <span>Independent journalism for a changing city.</span>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+  </div>
+</body>
+</html>
