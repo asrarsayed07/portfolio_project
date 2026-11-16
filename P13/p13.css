@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: #172033;
+  background: #f4f6fb;
+}
+
+.layout {
+  width: min(1100px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+/* Flexbox: arrange the header items in a row */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-block: 1.25rem;
+}
+
+.logo {
+  color: #172033;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nav a {
+  color: #4d5870;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #5265d8;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  border-radius: 0.6rem;
+  background: #5265d8;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #3e50bf;
+}
+
+/* Grid: create the main two-column layout */
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: start;
+  gap: 2rem;
+  padding-block: 4rem;
+}
+
+.intro {
+  padding-block: 2rem;
+}
+
+.eyebrow,
+.number {
+  color: #5265d8;
+  font-weight: 700;
+}
+
+h1 {
+  max-width: 12ch;
+  margin: 0.5rem 0 1rem;
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  line-height: 1.05;
+}
+
+.intro p {
+  max-width: 48ch;
+  color: #59647a;
+  line-height: 1.6;
+}
+
+/* Grid: arrange the cards in columns */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  padding: 1.25rem;
+  border: 1px solid #e0e5f0;
+  border-radius: 1rem;
+  background: white;
+}
+
+.card:first-child {
+  grid-row: span 2;
+}
+
+.card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  margin-bottom: 0;
+  color: #59647a;
+  line-height: 1.5;
+}
+
+/* Stack the content on small screens */
+@media (max-width: 700px) {
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .nav {
+    order: 1;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    padding-block: 2rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card:first-child {
+    grid-row: auto;
+  }
+}
