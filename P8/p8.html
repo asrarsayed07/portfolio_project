@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sticky Navbar and Card Overlay</title>
+  <link rel="stylesheet" href="p8.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#top">Northstar</a>
+    <nav aria-label="Main navigation">
+      <a href="#top">Home</a>
+      <a href="#cards">Discover</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="intro">
+      <h1>Find your next escape.</h1>
+      <p>Scroll to see the navbar stay at the top. Each destination card uses a relatively positioned container and an absolutely positioned text overlay.</p>
+    </section>
+
+    <section class="cards" id="cards" aria-label="Featured destinations">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85" alt="Mountain valley at sunrise">
+        <div class="card-overlay">
+          <h2>Mountain mornings</h2>
+          <p>Quiet trails and wide open skies.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=900&q=85" alt="Clear blue water beside a beach">
+        <div class="card-overlay">
+          <h2>Coastal calm</h2>
+          <p>Slow days beside the water.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=85" alt="Lake surrounded by forested mountains">
+        <div class="card-overlay">
+          <h2>Forest hideaway</h2>
+          <p>A little space to recharge.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="spacer" id="about">
+      <h2>Keep exploring</h2>
+      <p>This extra content makes it easy to test the sticky navbar by scrolling.</p>
+    </section>
+  </main>
+</body>
+</html>

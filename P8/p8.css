@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #172033;
+  background: #f3f5f9;
+}
+
+/* Sticks to the top of the viewport as the page scrolls. */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5%;
+  color: white;
+  background: #172033;
+  box-shadow: 0 4px 18px rgb(23 32 51 / 18%);
+}
+
+.brand {
+  font-weight: 750;
+  letter-spacing: 0.02em;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar nav a:hover {
+  color: #a9c7ff;
+}
+
+main {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+}
+
+.intro {
+  padding: 4rem 0 2rem;
+}
+
+h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.intro p {
+  max-width: 650px;
+  color: #596579;
+  line-height: 1.7;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem 0 4rem;
+}
+
+/* The relative card anchors its absolutely positioned overlay. */
+.card {
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #273b5d;
+  box-shadow: 0 12px 30px rgb(23 32 51 / 12%);
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* Anchors the caption to the bottom of the card. */
+.card-overlay {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 3.5rem 1.25rem 1.25rem;
+  color: white;
+  background: linear-gradient(transparent, rgb(10 18 32 / 88%));
+}
+
+.card-overlay h2 {
+  margin: 0 0 0.35rem;
+}
+
+.card-overlay p {
+  margin: 0;
+  color: #e1e8f4;
+}
+
+.spacer {
+  min-height: 40vh;
+  padding: 2rem 0;
+  color: #596579;
+}
+
+@media (max-width: 520px) {
+  .navbar {
+    align-items: flex-start;
+    gap: 0.8rem;
+    flex-direction: column;
+  }
+
+  .navbar nav {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+}
